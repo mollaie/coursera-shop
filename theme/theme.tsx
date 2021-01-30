@@ -1,0 +1,440 @@
+import { Dimensions, StyleSheet } from "react-native";
+
+const { width, height } = Dimensions.get("screen");
+const defaultPadding = 32;
+const defaultVerticalMargin = 8;
+
+export const Colors = {
+  primary: "#000DAE",
+  shadow: "#B8D9FA",
+  border: "#97AABD",
+  secondary: "#849DFE",
+  light: "#ffffff",
+  dark: "#000000",
+  lightDark: "#eeeeee",
+  transparent: "transparent",
+  lightGray: "#F5F8FA",
+  gray: "#5A5A5A",
+};
+
+export const theme = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+  },
+  imageCover: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "flex-start",
+    display: "flex",
+    flexDirection: "column",
+  },
+  toolbarContainer: {
+    display: "flex",
+    flexDirection: "row",
+    width,
+    height: 48,
+    backgroundColor: "red",
+    top: 32,
+    padding: defaultVerticalMargin,
+  },
+  toolbarBackButton: {
+    width: 32,
+    height: 32,
+    display: "flex",
+    alignItems: "center",
+    color: Colors.lightDark,
+  },
+  contentContainer: {
+    display: "flex",
+    flexDirection: "column",
+    marginTop: 88,
+    backgroundColor: Colors.transparent,
+    width,
+    height: height,
+    padding: defaultPadding,
+  },
+  titleText: {
+    fontSize: 34,
+    color: Colors.dark,
+    fontWeight: "bold",
+  },
+  normalText: {
+    fontSize: 12,
+    color: Colors.dark,
+    marginVertical: defaultVerticalMargin,
+  },
+  textInput: {
+    height: 56,
+    backgroundColor: Colors.light,
+    paddingVertical: 19,
+    paddingHorizontal: 22.5,
+    borderColor: Colors.border,
+    borderWidth: 1,
+    borderRadius: 4,
+    marginVertical: 8,
+  },
+  button: {
+    width: "100%",
+    height: 48,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    backgroundColor: Colors.transparent,
+    marginVertical: defaultVerticalMargin,
+    borderRadius: 4,
+    borderColor: Colors.light,
+    borderWidth: 2,
+    flexDirection: "row",
+  },
+  primaryButton: {
+    backgroundColor: Colors.primary,
+    borderColor: Colors.primary,
+    borderWidth: 2,
+  },
+  disabledPrimaryButton: {
+    backgroundColor: Colors.secondary,
+    borderColor: Colors.primary,
+    borderWidth: 2,
+  },
+  buttonDefaultText: {
+    color: Colors.light,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  buttonPrimaryText: {
+    color: Colors.light,
+  },
+});
+
+export const homeCustomStyle = StyleSheet.create({
+  HeaderContainer: {
+    width,
+    height: 150,
+    flexDirection: "column",
+    marginTop: 32,
+    padding: 24,
+  },
+  SearchBarContainer: {
+    flexDirection: "row",
+  },
+  SearchBar: {
+    backgroundColor: Colors.lightGray,
+    height: 44,
+    flex: 6,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 8,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  SearchBarText: {
+    flex: 11,
+  },
+  SearchBarIcon: {
+    flex: 1,
+  },
+  SearchButton: {
+    backgroundColor: Colors.lightGray,
+    width: 44,
+    height: 44,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  ToolbarContainer: {},
+  homeContainer: {
+    paddingHorizontal: 32,
+  },
+  CardContainer: {
+    width: 152,
+    height: 200,
+    backgroundColor: Colors.light,
+    marginRight: 24,
+    padding: 0,
+    alignItems: "center",
+    flexDirection: "column",
+  },
+  CardImageContainer: {
+    backgroundColor: "#FAFDFF",
+    width: 152,
+    height: 146,
+    marginBottom: 16,
+    padding: 16,
+  },
+  CardTextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: 152,
+  },
+  SecondCardContainer: {
+    width: 170,
+    height: 200,
+    backgroundColor: "#FAFDFF",
+    padding: 16,
+    alignItems: "center",
+    flexDirection: "column",
+    marginVertical: 16,
+  },
+  SecondCardImageContainer: {
+    backgroundColor: Colors.transparent,
+    width: 144,
+    height: 130,
+    marginBottom: 16,
+    padding: 0,
+  },
+  SecondCardTextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: 120,
+  },
+});
+
+export const productCustomStyle = StyleSheet.create({
+  Container: {
+    flex: 1,
+    backgroundColor: Colors.light,
+  },
+  CarouselContainer: {
+    flexDirection: "column",
+    padding: 32,
+  },
+  CarouselSwipe: {},
+  CarouselSwipeContainer: {
+    paddingVertical: 16,
+  },
+  Ball: {
+    width: 36,
+    height: 36,
+    borderRadius: 36,
+    backgroundColor: "#97AABD",
+    marginRight: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+export const profileCustomStyle = StyleSheet.create({
+  contentContainer: {
+    flexDirection: "column",
+    backgroundColor: Colors.lightGray,
+    flex: 1,
+  },
+  headerContainer: {
+    backgroundColor: Colors.secondary,
+    flexDirection: "column",
+    height: 164,
+    paddingHorizontal: 32,
+    paddingTop: 48,
+  },
+  headerToolbarContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  headerProfileContainer: {
+    flexDirection: "row",
+  },
+  headerProfileAvatarContainer: {},
+  headerProfileAvatar: {
+    width: 60,
+    height: 60,
+    borderRadius: 60,
+    borderWidth: 2,
+    borderColor: Colors.light,
+  },
+  headerProfileTextContainer: {
+    flexDirection: "column",
+    paddingHorizontal: 16,
+    alignItems: "flex-start",
+    justifyContent: "center",
+    width: width / 1.5,
+  },
+  headerProfileTextTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: Colors.light,
+    textAlign: "left",
+  },
+  headerProfileTextNormal: {
+    fontSize: 12,
+    textAlign: "left",
+    marginRight: 8,
+    color: Colors.light,
+  },
+  purchaseContainer: {
+    flexDirection: "column",
+    backgroundColor: Colors.light,
+    borderBottomColor: Colors.lightGray,
+    borderBottomWidth: 1,
+    paddingVertical: 8,
+  },
+  purchaseHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  purchaseHeaderTextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+  },
+  purchaseStateContainer: {
+    flexDirection: "row",
+    paddingVertical: 16,
+    marginTop: 8,
+    backgroundColor: Colors.light,
+    justifyContent: "space-between",
+    borderBottomColor: Colors.lightGray,
+    borderBottomWidth: 1,
+    paddingHorizontal: 48,
+  },
+  purchaseStateItemContainer: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  purchaseDealsContainer: {
+    flexDirection: "row",
+    paddingVertical: 16,
+    backgroundColor: Colors.light,
+    marginTop: 8,
+    justifyContent: "space-between",
+    borderBottomColor: Colors.lightGray,
+    borderBottomWidth: 1,
+    paddingHorizontal: 16,
+  },
+  purchaseItemsContainer: {
+    backgroundColor: Colors.light,
+    marginTop: 8,
+    flexDirection: "column",
+    paddingVertical: 16,
+    borderBottomColor: Colors.lightGray,
+    borderBottomWidth: 1,
+    height: 280,
+    justifyContent: "space-between",
+  },
+  purchaseItemCard: {
+    width: 120,
+    height: 160,
+    marginHorizontal: 8,
+    borderWidth: 1,
+    borderColor: Colors.lightGray,
+    flexDirection: "column",
+    borderRadius: 8,
+    marginTop: 16,
+  },
+  purchaseItemCardImage: {
+    width: 120,
+    height: 100,
+    resizeMode: "contain",
+  },
+  purchaseItemCardText: {
+    fontSize: 10,
+    padding: 8,
+    color: Colors.gray,
+  },
+  purchaseItemCardPriceText: {
+    color: Colors.primary,
+    fontSize: 9,
+  },
+  purchaseItemBuyAgainContainer: {
+    backgroundColor: Colors.light,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 8,
+    paddingVertical: 16,
+    borderWidth: 1,
+    borderColor: Colors.lightGray,
+    marginBottom: 8,
+  },
+  purchaseItemBuyAgain: {
+    fontSize: 14,
+    color: Colors.primary,
+  },
+});
+
+export const cartCustomStyle = StyleSheet.create({
+  emptyContainer: {
+    flexDirection: "column",
+    padding: 32,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  emptyImage: {
+    width: width - 128,
+  },
+  emptyText: {
+    fontSize: 24,
+    textAlign: "center",
+  },
+  cartItem: {
+    display: "flex",
+    height: 120,
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    backgroundColor: Colors.lightGray,
+    marginVertical: 8,
+    borderRadius: 8,
+    padding: 16,
+  },
+  cartItemImage: {
+    width: 80,
+    height: 80,
+    marginRight: 32,
+  },
+  cartItemTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  cartItemPrice: {
+    fontSize: 14,
+    color: Colors.gray,
+    marginTop: 16,
+  },
+  cartItemButtonContainer: {
+    flexDirection: "row",
+    marginTop: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cartItemButton: {
+    backgroundColor: Colors.dark,
+    width: 24,
+    height: 24,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 8,
+    marginHorizontal: 8,
+  },
+  cartItemText: {
+    backgroundColor: Colors.light,
+    color: Colors.dark,
+    width: 32,
+    height: 32,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 16,
+    marginHorizontal: 8,
+    textAlign: "center",
+    padding: 8,
+  },
+  cartItemFooterContainer: {
+    flexDirection: "column",
+    padding: 16,
+    borderTopWidth: 1,
+    borderTopColor: Colors.gray,
+    marginBottom: 64,
+  },
+  cartItemFooterTextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 16,
+  },
+  cartItemFooterText: {
+    fontSize: 16,
+  },
+});
